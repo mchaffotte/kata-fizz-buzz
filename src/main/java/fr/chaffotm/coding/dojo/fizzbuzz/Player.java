@@ -20,17 +20,26 @@ package fr.chaffotm.coding.dojo.fizzbuzz;
 public class Player {
 
     public String say(int number) {
-        String response;
-        if (isDivisibleBy(number, 3) && isDivisibleBy(number, 5)) {
-            response = "FizzBuzz";
-        } else if (isDivisibleBy(number, 3)) {
-            response = "Fizz";
-        } else if (isDivisibleBy(number, 5)) {
-            response = "Buzz";
-        } else {
-            response = String.valueOf(number);
+        final StringBuilder builder = new StringBuilder();
+        if (isFizz(number)) {
+            builder.append("Fizz");
         }
-        return response;
+        if (isBuzz(number)) {
+            builder.append("Buzz");
+        }
+        //Neither Fizz nor Buzz
+        if (builder.length() == 0){
+            builder.append(number);
+        }
+        return builder.toString();
+    }
+
+    private boolean isFizz(int number) {
+        return isDivisibleBy(number, 3);
+    }
+
+    private boolean isBuzz(int number) {
+        return isDivisibleBy(number, 5);
     }
 
     private boolean isDivisibleBy(int dividend, int divisor) {

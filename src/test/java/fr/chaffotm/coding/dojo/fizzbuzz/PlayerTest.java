@@ -96,7 +96,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void say_should_answer_fizz_buzz_if_the_number_is_15() throws Exception {
+    public void say_should_answer_fizz_buzz_if_the_number_is_divisible_by_three_and_five() throws Exception {
         //Given
         Player player = new Player();
 
