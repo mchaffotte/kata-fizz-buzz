@@ -71,4 +71,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo("Fizz");
     }
 
+    @Test
+    public void say_should_answer_buzz_with_five() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(5);
+
+        //Then
+        assertThat(response).isEqualTo("Buzz");
+    }
+
 }
