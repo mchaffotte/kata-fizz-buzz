@@ -23,7 +23,7 @@ public class Player {
         String response;
         if (number % 3 == 0) {
             response = "Fizz";
-        } else if (number == 5) {
+        } else if (number % 5 == 0) {
             response = "Buzz";
         } else {
             response = String.valueOf(number);

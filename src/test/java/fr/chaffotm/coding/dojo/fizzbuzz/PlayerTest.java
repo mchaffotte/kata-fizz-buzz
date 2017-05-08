@@ -83,4 +83,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo("Buzz");
     }
 
+    @Test
+    public void say_should_answer_buzz_if_the_number_is_divisible_by_five() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(20);
+
+        //Then
+        assertThat(response).isEqualTo("Buzz");
+    }
+
 }
