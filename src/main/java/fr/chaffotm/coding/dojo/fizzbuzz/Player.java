@@ -20,10 +20,13 @@ package fr.chaffotm.coding.dojo.fizzbuzz;
 public class Player {
 
     public String say(int number) {
+        String response;
         if (number == 3) {
-            return "Fizz";
+            response = "Fizz";
+        } else {
+            response = String.valueOf(number);
         }
-        return String.valueOf(number);
+        return response;
     }
 
 }
