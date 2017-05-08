@@ -59,4 +59,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo("Fizz");
     }
 
+    @Test
+    public void say_should_answer_fizz_if_the_number_is_divisible_by_three() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(6);
+
+        //Then
+        assertThat(response).isEqualTo("Fizz");
+    }
+
 }

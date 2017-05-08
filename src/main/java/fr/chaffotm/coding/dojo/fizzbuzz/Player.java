@@ -21,7 +21,7 @@ public class Player {
 
     public String say(int number) {
         String response;
-        if (number == 3) {
+        if (number % 3 == 0) {
             response = "Fizz";
         } else {
             response = String.valueOf(number);
