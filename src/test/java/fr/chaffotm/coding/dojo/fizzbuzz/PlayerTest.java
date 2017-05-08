@@ -107,4 +107,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo("FizzBuzz");
     }
 
+    @Test
+    public void say_should_answer_zero_with_zero() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(0);
+
+        //Then
+        assertThat(response).isEqualTo("0");
+    }
+
 }
