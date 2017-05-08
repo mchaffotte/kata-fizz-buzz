@@ -19,8 +19,11 @@ package fr.chaffotm.coding.dojo.fizzbuzz;
  */
 public class Player {
 
-    public int say(int number) {
-        return number;
+    public String say(int number) {
+        if (number == 3) {
+            return "Fizz";
+        }
+        return String.valueOf(number);
     }
 
 }

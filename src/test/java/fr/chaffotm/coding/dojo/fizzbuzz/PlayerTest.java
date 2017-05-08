@@ -29,10 +29,10 @@ public class PlayerTest {
         Player player = new Player();
 
         //When
-        int response = player.say(1);
+        String response = player.say(1);
 
         //Then
-        assertThat(response).isEqualTo(1);
+        assertThat(response).isEqualTo("1");
     }
 
     @Test
@@ -41,10 +41,22 @@ public class PlayerTest {
         Player player = new Player();
 
         //When
-        int response = player.say(2);
+        String response = player.say(2);
 
         //Then
-        assertThat(response).isEqualTo(2);
+        assertThat(response).isEqualTo("2");
+    }
+
+    @Test
+    public void say_should_answer_fizz_with_three() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(3);
+
+        //Then
+        assertThat(response).isEqualTo("Fizz");
     }
 
 }
