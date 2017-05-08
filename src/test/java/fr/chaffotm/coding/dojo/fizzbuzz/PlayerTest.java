@@ -35,4 +35,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo(1);
     }
 
+    @Test
+    public void say_should_answer_two_with_two() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        int response = player.say(2);
+
+        //Then
+        assertThat(response).isEqualTo(2);
+    }
+
 }

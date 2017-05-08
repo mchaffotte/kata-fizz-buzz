@@ -20,7 +20,7 @@ package fr.chaffotm.coding.dojo.fizzbuzz;
 public class Player {
 
     public int say(int number) {
-        return 1;
+        return number;
     }
 
 }
