@@ -21,14 +21,18 @@ public class Player {
 
     public String say(int number) {
         String response;
-        if (number % 3 == 0) {
+        if (isDivisibleBy(number, 3)) {
             response = "Fizz";
-        } else if (number % 5 == 0) {
+        } else if (isDivisibleBy(number, 5)) {
             response = "Buzz";
         } else {
             response = String.valueOf(number);
         }
         return response;
+    }
+
+    private boolean isDivisibleBy(int dividend, int divisor) {
+        return dividend % divisor == 0;
     }
 
 }
