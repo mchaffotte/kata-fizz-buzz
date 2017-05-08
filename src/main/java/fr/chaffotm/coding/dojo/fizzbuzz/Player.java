@@ -21,7 +21,9 @@ public class Player {
 
     public String say(int number) {
         String response;
-        if (isDivisibleBy(number, 3)) {
+        if (isDivisibleBy(number, 3) && isDivisibleBy(number, 5)) {
+            response = "FizzBuzz";
+        } else if (isDivisibleBy(number, 3)) {
             response = "Fizz";
         } else if (isDivisibleBy(number, 5)) {
             response = "Buzz";

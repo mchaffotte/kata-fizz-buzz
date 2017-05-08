@@ -95,4 +95,16 @@ public class PlayerTest {
         assertThat(response).isEqualTo("Buzz");
     }
 
+    @Test
+    public void say_should_answer_fizz_buzz_if_the_number_is_15() throws Exception {
+        //Given
+        Player player = new Player();
+
+        //When
+        String response = player.say(15);
+
+        //Then
+        assertThat(response).isEqualTo("FizzBuzz");
+    }
+
 }
